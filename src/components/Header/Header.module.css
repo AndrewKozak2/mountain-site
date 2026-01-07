@@ -1,0 +1,43 @@
+.header {
+  width: 100%;
+  padding: 40px 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: white;
+  transition: opacity 0.3s;
+}
+
+.user {
+display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px; 
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.user img {
+    width: 24px; 
+    height: auto;
+    
+}

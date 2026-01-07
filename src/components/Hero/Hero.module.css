@@ -1,0 +1,145 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  z-index: 1;
+  color: white;
+
+  background-image: url("../../assets/VG.png"), url("../../assets/MG.png"),
+    url("../../assets/BG-Hero.png"), url("../../assets/HG.png");
+
+  background-position: center 500px, center 300px, center center, center top;
+
+  background-size: 100% auto, 100% auto, cover, cover;
+
+  background-repeat: no-repeat;
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  transform: translateY(-80px);
+}
+
+.followText {
+  font-weight: 700;
+  font-size: 18px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.heroContent {
+  width: 100%;
+  max-width: 850px;
+  transform: translateY(-100px);
+  text-align: left;
+  margin: 0 auto;
+  padding-left: 50px;
+}
+
+.subtitle {
+  color: #fbd784;
+  font-weight: 800;
+  letter-spacing: 6px;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.subtitle::before {
+  content: "";
+  width: 72px;
+  height: 2px;
+  background-color: #fbd784;
+  margin-right: 32px;
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  font-size: 70px;
+  line-height: 1.1;
+  margin: 0 0 32px 0;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.scrollDown {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.heroSlider {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  transform: translateY(-80px);
+  position: relative;
+  padding-right: 40px;
+}
+
+.heroSlider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.sliderItem {
+  cursor: pointer;
+  text-align: right;
+  transition: 0.3s;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+}
+
+.sliderItem:first-child {
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.sliderItem:first-child::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -40px;
+  width: 3px;
+  height: 40px;
+  background-color: #ffffff;
+  z-index: 2;
+}
+
+.sliderItem:nth-child(2) {
+  padding-right: 0;
+}
+.sliderItem:nth-child(2)::after {
+  display: none;
+}
