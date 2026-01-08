@@ -3,6 +3,7 @@ import Hero from "./components/Hero/Hero";
 import Section from "./components/Section/Section";
 import Footer from "./components/Footer/Footer";
 import Preloader from "./components/Preloader/Preloader";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 import { sectionsData } from "./data";
 
@@ -36,6 +37,7 @@ function App() {
         ))}
       </div>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
