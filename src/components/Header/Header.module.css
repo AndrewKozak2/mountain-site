@@ -5,12 +5,18 @@
   top: 0;
   left: 0;
   z-index: 10;
+  transition: padding 0.3s ease;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo {
+  cursor: pointer;
+  display: block;
 }
 
 .navLinks {
@@ -22,22 +28,53 @@
 .navLinks a {
   text-decoration: none;
   color: white;
-  transition: opacity 0.3s;
+  font-weight: 700;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.navLinks a:hover {
+  color: #fbd784;
+  transform: translateY(-3px);
 }
 
 .user {
-display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 18px; 
-    font-weight: 700;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.user:hover {
+  color: #fbd784;
 }
 
 .user img {
-    width: 24px; 
-    height: auto;
-    
+  width: 24px;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 30px 40px;
+  }
+
+  .navLinks {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 20px;
+  }
+
+  .navLinks {
+    display: none;
+  }
 }

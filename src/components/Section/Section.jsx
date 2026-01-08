@@ -1,26 +1,14 @@
 import s from "./Section.module.css";
 
-const Section = ({
-  numberIcon, 
-  number,
-  subtitle,
-  title,
-  description,
-  image,
-  isReversed,
-}) => {
+const Section = ({ number, subtitle, title, description, image, reversed }) => {
   return (
-    <div
-      className={`${s.section} ${isReversed ? s.reversed : ""}`}
-      id={`section-${number}`}
-    >
+    <section className={`${s.section} ${reversed ? s.reversed : ""}`}>
       <div className={s.content}>
-        <img src={numberIcon} alt={number} className={s.number} />
+        <img src={number} alt="Section Number" className={s.number} />
 
-        <div className={s.subtitle}>{subtitle}</div>
+        <span className={s.subtitle}>{subtitle}</span>
         <h2 className={s.title}>{title}</h2>
         <p className={s.description}>{description}</p>
-
         <a href="#" className={s.readMore}>
           read more
           <span>&rarr;</span>
@@ -30,7 +18,7 @@ const Section = ({
       <div className={s.imageContainer}>
         <img src={image} alt={title} className={s.image} />
       </div>
-    </div>
+    </section>
   );
 };
 

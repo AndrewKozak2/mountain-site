@@ -1,32 +1,49 @@
 .section {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 100px 80px;
-  gap: 120px;
+  gap: 100px;
   position: relative;
-  max-width: 1560px;
+  max-width: 1460px;
   margin: 0 auto;
 }
+
 .reversed {
   flex-direction: row-reverse;
 }
 
 .content {
-    flex: 1;
-    position: relative;
-    max-width: 750px; 
-    z-index: 2;
+  flex: 1;
+  width: 50%;
+  position: relative;
+  z-index: 2;
+  padding-left: 150px;
+  padding-top: 60px;
 }
 
 .number {
-    position: absolute;
-    top: -160px; 
-    left: -120px; 
-    width: 240px; 
-    height: auto;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: auto;
+  z-index: -1;
 }
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .subtitle {
   color: #fbd784;
   font-weight: 700;
@@ -47,15 +64,17 @@
 }
 
 .title {
-    font-family: 'Playfair Display', serif;
-    font-size: 80px; 
-    line-height: 1.1;
-    margin-bottom: 27px;
+  font-family: "Playfair Display", serif;
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 27px;
 }
+
 .description {
   font-size: 18px;
   line-height: 32px;
   margin-bottom: 27px;
+  font-weight: 600;
 }
 
 .readMore {
@@ -69,18 +88,77 @@
 }
 
 .readMore:hover {
-  color: white;
+  color: #fbd784;
+  transform: translateX(10px);
 }
 
-.imageContainer {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
+@media (max-width: 1024px) {
+  .section {
+    padding: 80px 40px;
+    gap: 60px;
+    flex-direction: column;
+  }
 
-.image {
+  .reversed {
+    flex-direction: column;
+  }
+
+  .content {
     width: 100%;
-    max-width: 700px; 
-    height: auto;
-    object-fit: cover;
+    padding-left: 0;
+    padding-top: 80px;
+    text-align: left;
+  }
+
+  .number {
+    top: -20px;
+    left: 0;
+    opacity: 0.5;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .imageContainer {
+    width: 100%;
+  }
+
+  .image {
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .number {
+    width: 150px;
+    top: -10px;
+    opacity: 0.3;
+  }
+
+  .content {
+    padding-top: 60px;
+  }
+
+  .subtitle::before {
+    width: 40px;
+    margin-right: 16px;
+  }
 }
