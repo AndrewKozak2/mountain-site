@@ -48,7 +48,6 @@ export default function Hero() {
 
   return (
     <section className={s.hero} id="start">
-      {" "}
       <div className={s.socialLinks}>
         <span className={s.followText}>Follow us</span>
         <div className={s.icons}>
@@ -82,29 +81,22 @@ export default function Hero() {
           </a>
         </div>
       </div>
+
       <div className={s.heroSlider}>
         <div className={s.sliderItem} onClick={() => smoothScroll("start")}>
           Start
         </div>
-        <div
-          className={s.sliderItem}
-          onClick={() => smoothScroll("section-01")}
-        >
+        <div className={s.sliderItem} onClick={() => smoothScroll("step-1")}>
           01
         </div>
-        <div
-          className={s.sliderItem}
-          onClick={() => smoothScroll("section-02")}
-        >
+        <div className={s.sliderItem} onClick={() => smoothScroll("step-2")}>
           02
         </div>
-        <div
-          className={s.sliderItem}
-          onClick={() => smoothScroll("section-03")}
-        >
+        <div className={s.sliderItem} onClick={() => smoothScroll("step-3")}>
           03
         </div>
       </div>
+
       <div
         className={s.contentLayer}
         style={{ transform: `translateY(${offset * 0.5}px)` }}
@@ -112,9 +104,10 @@ export default function Hero() {
         <div className={s.heroContent}>
           <span className={s.subtitle}>A HIKING GUIDE</span>
           <h1 className={s.title}>Be Prepared For The Mountains And Beyond!</h1>
+
           <div
             className={s.scrollDown}
-            onClick={() => smoothScroll("section-01", 1500)}
+            onClick={() => smoothScroll("step-1", 1500)}
           >
             scroll down
             <svg

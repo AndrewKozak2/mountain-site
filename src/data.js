@@ -9,6 +9,7 @@ import num03 from "./assets/icon/03number.svg";
 export const sectionsData = [
   {
     id: 1,
+    slug: "step-1",
     number: num01,
     subtitle: "GET STARTED",
     title: "What level of hiker are you?",
@@ -19,6 +20,7 @@ export const sectionsData = [
   },
   {
     id: 2,
+    slug: "step-2",
     number: num02,
     subtitle: "HIKING ESSENTIALS",
     title: "Picking the right Hiking Gear!",
@@ -29,6 +31,7 @@ export const sectionsData = [
   },
   {
     id: 3,
+    slug: "step-3",
     number: num03,
     subtitle: "WHERE YOU GO IS THE KEY",
     title: "Understand Your Map & Timing",

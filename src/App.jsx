@@ -27,6 +27,7 @@ function App() {
         {sectionsData.map((item) => (
           <Section
             key={item.id}
+            id={item.slug}
             number={item.number}
             subtitle={item.subtitle}
             title={item.title}

@@ -183,10 +183,6 @@
   letter-spacing: 1px;
 }
 
-.accent {
-  color: #fbd784;
-}
-
 .scrollDown {
   color: white;
   text-decoration: none;
@@ -212,22 +208,20 @@
 
 @media (max-width: 1440px) {
   .hero {
-    height: 1300px;
-    padding-top: 220px;
+    height: 1200px;
+    padding-top: 200px;
   }
   .socialLinks {
-    left: 40px;
     top: 220px;
   }
   .heroSlider {
-    right: 40px;
     top: 220px;
   }
   .layerMG {
-    top: 400px;
+    top: 550px;
   }
   .layerVG {
-    top: 600px;
+    top: 700px;
   }
 }
 
@@ -266,6 +260,15 @@
   }
   .layerVG {
     top: 600px;
+  }
+}
+
+@media (max-height: 800px) {
+  .hero {
+    padding-top: 150px; 
+  }
+  .layerMG {
+    top: 450px;
   }
 }
 

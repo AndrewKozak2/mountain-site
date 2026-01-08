@@ -1,8 +1,16 @@
 import s from "./Section.module.css";
 
-const Section = ({ number, subtitle, title, description, image, reversed }) => {
+const Section = ({
+  id,
+  number,
+  subtitle,
+  title,
+  description,
+  image,
+  reversed,
+}) => {
   return (
-    <section className={`${s.section} ${reversed ? s.reversed : ""}`}>
+    <section id={id} className={`${s.section} ${reversed ? s.reversed : ""}`}>
       <div className={s.content}>
         <img src={number} alt="Section Number" className={s.number} />
 
