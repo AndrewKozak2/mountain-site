@@ -264,9 +264,32 @@
   }
 }
 
+@media (max-height: 900px) {
+  .hero {
+    padding-top: 150px !important;
+
+    height: 100vh;
+    min-height: 750px;
+  }
+
+  .layerMG {
+    top: 550px !important;
+    width: 100%;
+  }
+
+  .layerVG {
+    top: 700px !important;
+  }
+
+  .socialLinks,
+  .heroSlider {
+    top: 150px !important;
+  }
+}
+
 @media (max-height: 800px) {
   .hero {
-    padding-top: 150px; 
+    padding-top: 150px;
   }
   .layerMG {
     top: 450px;
