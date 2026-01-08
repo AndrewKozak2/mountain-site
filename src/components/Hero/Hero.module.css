@@ -192,6 +192,7 @@
   gap: 10px;
   transition: color 0.3s ease;
   cursor: pointer;
+  width: fit-content;
 }
 
 .scrollDown:hover {
