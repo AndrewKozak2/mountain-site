@@ -45,6 +45,7 @@ export default function Hero() {
 
     requestAnimationFrame(animation);
   };
+  const contentOpacity = Math.max(0, 1 - offset / 1000);
 
   return (
     <section className={s.hero} id="start">
@@ -99,11 +100,17 @@ export default function Hero() {
 
       <div
         className={s.contentLayer}
-        style={{ transform: `translateY(${offset * 0.5}px)` }}
+        style={{
+          transform: `translateY(${offset * 0.5}px)`,
+          opacity: contentOpacity,
+        }}
       >
         <div className={s.heroContent}>
           <span className={s.subtitle}>A HIKING GUIDE</span>
-          <h1 className={s.title}>Be Prepared For The Mountains And Beyond!</h1>
+          <h1 className={s.title}>
+            <span className={s.accent}>Be Prepared</span> For The Mountains And
+            Beyond!
+          </h1>
 
           <div
             className={s.scrollDown}
@@ -111,6 +118,7 @@ export default function Hero() {
           >
             scroll down
             <svg
+              className={s.arrowIcon}
               width="16"
               height="24"
               viewBox="0 0 16 24"
@@ -125,7 +133,13 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <img src={mgImage} alt="Mountains" className={s.layerMG} />
+      <img
+        src={mgImage}
+        alt="Mountains"
+        className={s.layerMG}
+        style={{ transform: `translateY(${-offset * 0.19}px)` }}
+      />
+
       <img src={vgImage} alt="Grass" className={s.layerVG} />
       <img src={bgContent} alt="Shadow" className={s.layerShadow} />
     </section>
